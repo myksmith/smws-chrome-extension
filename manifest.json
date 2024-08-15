@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "SMWS Cask ID replacer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "If it finds a cask ID on smws.com, it adds the distillery name",
 
   "content_scripts": [{
