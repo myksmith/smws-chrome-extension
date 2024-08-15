@@ -220,8 +220,8 @@ function replaceCasks()
       it = casks[i].innerText;
       matches = it.match(regex).groups;
       if(matches !=null){
-        name = codes[matches.caskid];
-        casks[i].innerText = it + " (" + name + ")";
+        distillery_name = codes[matches.caskid];
+        casks[i].innerText = it + " (" + distillery_name + ")";
       }
     }
   });
