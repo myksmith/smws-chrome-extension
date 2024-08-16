@@ -211,16 +211,19 @@ const codes = {
 
 function replaceCasks()
 {
-  var casks = document.getElementsByClassName('caskNo');
+  var elementNames = ['caskNo', 'anotherClass', 'yetAnotherClass']; // Add more class names as needed
   const regex = /cask no\. (?<caskid>[A-Z]*[0-9]+)\.[0-9]/i;
-  for (var i = 0, l = casks.length; i < l; i++) {
-    it = casks[i].innerText;
-    matches = it.match(regex).groups;
-    if(matches !=null){
-      distillery = codes[matches.caskid];
-      casks[i].innerText = it + " (" + distillery + ")";
+  elementNames.forEach(function(className) {
+    var casks = document.getElementsByClassName(className);
+    for (var i = 0, l = casks.length; i < l; i++) {
+      it = casks[i].innerText;
+      matches = it.match(regex).groups;
+      if(matches !=null){
+        distillery_name = codes[matches.caskid];
+        casks[i].innerText = it + " (" + distillery_name + ")";
+      }
     }
-  }
+  });
 }
 
 // wait a bit - sometimes smws does dynamic loading
