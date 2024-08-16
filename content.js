@@ -213,7 +213,6 @@ function replaceCasks()
 {
   var elementNames = ['caskNo', 'anotherClass', 'yetAnotherClass']; // Add more class names as needed
   const regex = /cask no\. (?<caskid>[A-Z]*[0-9]+)\.[0-9]/i;
-  
   elementNames.forEach(function(className) {
     var casks = document.getElementsByClassName(className);
     for (var i = 0, l = casks.length; i < l; i++) {
